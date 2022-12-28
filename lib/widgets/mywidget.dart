@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterforbeginners2/utils/defaults.dart';
 
-
 MyConfig _myConfig = MyConfig();
 
 class MyInputField extends StatefulWidget {
@@ -31,7 +30,6 @@ class MyInputField extends StatefulWidget {
 class _MyInputFieldState extends State<MyInputField> {
   @override
   void initState() {
-    
     super.initState();
   }
 
@@ -220,7 +218,6 @@ class TermCondition extends StatelessWidget {
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     // code to open / launch terms of service link here
-                    Navigator.pushNamed(context, '/CMS');
                   }),
           ]),
     );

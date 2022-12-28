@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Form(
           child: Column(
             children: [
-              Image.asset("assets/images/karmalogo.png"),
+              Image.asset("assets/images/registerbg.png"),
               // Image.asset(
               //   "assets/images/headerimagesmall.png",  // this is Static Image
               //   // height: MediaQuery.of(context).size.height * 0.20,
