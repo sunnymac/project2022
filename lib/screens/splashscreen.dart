@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterforbeginners2/screens/loginscreen.dart';
+import 'package:flutterforbeginners2/screens/navbar.dart';
 import 'package:flutterforbeginners2/utils/defaults.dart';
+import 'package:flutterforbeginners2/utils/sharedpref.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,8 +19,14 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginScreen()));
+      bool isLogin = SharedPrefs().getLoginFlag;
+      if (isLogin) {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => BottomNavbarScreen()));
+      } else {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => LoginScreen()));
+      }
     });
   }
 

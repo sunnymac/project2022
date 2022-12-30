@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterforbeginners2/screens/splashscreen.dart';
+import 'package:flutterforbeginners2/utils/sharedpref.dart';
 
 void main() async {
+  await SharedPrefs().init();
   runApp(const MyApp());
 }
 

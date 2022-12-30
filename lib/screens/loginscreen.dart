@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterforbeginners2/screens/navbar.dart';
 import 'package:flutterforbeginners2/screens/registerscreen.dart';
 import 'package:flutterforbeginners2/utils/defaults.dart';
+import 'package:flutterforbeginners2/utils/sharedpref.dart';
 import 'package:flutterforbeginners2/widgets/mywidget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -138,6 +139,10 @@ class _LoginScreenState extends State<LoginScreen> {
       _myconfig.toast(msg: "Please Enter Cell Phone");
       return;
     }
+
+    SharedPrefs().setLoginFlag(true);
+
+    
     Navigator.push(context,
         MaterialPageRoute(builder: ((context) => BottomNavbarScreen())));
   }
